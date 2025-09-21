@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Directo - OficioGo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .status {
+            background: rgba(34, 197, 94, 0.2);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 OficioGo - Test HTML</h1>
+        
+        <div class="status">
+            <h2>✅ HTML Funcionando</h2>
+            <p>Si puedes ver esto, el servidor web está funcionando correctamente</p>
+        </div>
+        
+        <p id="time">Cargando...</p>
+        
+        <div>
+            <button onclick="testJS()">🧪 Probar JavaScript</button>
+            <button onclick="window.location.href='/'">🔄 Volver a React</button>
+        </div>
+        
+        <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+            <p>Puerto: 3000 | Protocolo: HTTP | Framework: Vite</p>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            document.getElementById('time').textContent = 
+                'Hora actual: ' + new Date().toLocaleTimeString();
+        }
+        
+        function testJS() {
+            alert('¡JavaScript funcionando perfectamente!');
+            console.log('Test JS ejecutado correctamente');
+        }
+        
+        // Actualizar tiempo cada segundo
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        console.log('🚀 Página de test cargada correctamente');
+    </script>
+</body>
+</html>
