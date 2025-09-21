@@ -170,334 +170,6 @@
   z-index: 1;
 }
 
-/* Central blob shape */
-.central-blob {
-  position: absolute;
-  width: 400px;
-  height: 300px;
-  background: rgba(30, 64, 175, 0.7);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: central-blob-pulse 15s ease-in-out infinite;
-  z-index: 1;
-}
-
-/* Multiple diagonal lines */
-.diagonal-line-1 {
-  position: absolute;
-  width: 200px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #10B981, transparent);
-  top: 20%;
-  left: -100px;
-  animation: diagonal-slide-1 12s linear infinite;
-  transform-origin: center;
-}
-
-.diagonal-line-2 {
-  position: absolute;
-  width: 150px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #06B6D4, transparent);
-  top: 60%;
-  right: -75px;
-  animation: diagonal-slide-2 10s linear infinite;
-  transform-origin: center;
-}
-
-.diagonal-line-3 {
-  position: absolute;
-  width: 180px;
-  height: 5px;
-  background: linear-gradient(90deg, transparent, #8B5CF6, transparent);
-  top: 40%;
-  left: -90px;
-  animation: diagonal-slide-1 14s linear infinite;
-  animation-delay: -3s;
-  transform-origin: center;
-}
-
-.diagonal-line-4 {
-  position: absolute;
-  width: 120px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #F59E0B, transparent);
-  top: 80%;
-  left: -60px;
-  animation: diagonal-slide-3 16s linear infinite;
-  transform-origin: center;
-}
-
-.diagonal-line-5 {
-  position: absolute;
-  width: 160px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #EF4444, transparent);
-  top: 30%;
-  right: -80px;
-  animation: diagonal-slide-4 13s linear infinite;
-  transform-origin: center;
-}
-
-.diagonal-line-6 {
-  position: absolute;
-  width: 140px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #10B981, #06B6D4, transparent);
-  top: 70%;
-  left: -70px;
-  animation: diagonal-slide-3 11s linear infinite;
-  animation-delay: -5s;
-  transform-origin: center;
-}
-
-/* Enhanced dot patterns */
-.dot-pattern-1 {
-  position: absolute;
-  top: 15%;
-  left: 20%;
-  width: 60px;
-  height: 60px;
-  background-image: radial-gradient(circle, #10B981 2px, transparent 2px);
-  background-size: 10px 10px;
-  opacity: 0.6;
-  animation: float-dots 8s ease-in-out infinite;
-}
-
-.dot-pattern-2 {
-  position: absolute;
-  top: 70%;
-  right: 25%;
-  width: 80px;
-  height: 40px;
-  background-image: radial-gradient(circle, #06B6D4 1.5px, transparent 1.5px);
-  background-size: 8px 8px;
-  opacity: 0.7;
-  animation: float-dots 6s ease-in-out infinite;
-  animation-delay: -2s;
-}
-
-.dot-pattern-3 {
-  position: absolute;
-  top: 30%;
-  right: 10%;
-  width: 50px;
-  height: 80px;
-  background-image: radial-gradient(circle, #8B5CF6 1px, transparent 1px);
-  background-size: 6px 6px;
-  opacity: 0.5;
-  animation: float-dots 10s ease-in-out infinite;
-  animation-delay: -4s;
-}
-
-.dot-pattern-4 {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  width: 70px;
-  height: 50px;
-  background-image: radial-gradient(circle, #F59E0B 1.5px, transparent 1.5px);
-  background-size: 9px 9px;
-  opacity: 0.6;
-  animation: float-particles 12s ease-in-out infinite;
-}
-
-.dot-pattern-5 {
-  position: absolute;
-  top: 85%;
-  left: 60%;
-  width: 40px;
-  height: 60px;
-  background-image: radial-gradient(circle, #EF4444 1px, transparent 1px);
-  background-size: 7px 7px;
-  opacity: 0.5;
-  animation: float-particles 9s ease-in-out infinite;
-  animation-delay: -3s;
-}
-
-/* Enhanced angular shapes */
-.angular-shape-1 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(45deg, #10B981, #059669);
-  top: 10%;
-  left: -50px;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  animation: diagonal-slide-1 16s linear infinite;
-  opacity: 0.4;
-}
-
-.angular-shape-2 {
-  position: absolute;
-  width: 80px;
-  height: 120px;
-  background: linear-gradient(135deg, #06B6D4, #0891B2);
-  top: 50%;
-  right: -40px;
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  animation: diagonal-slide-2 13s linear infinite;
-  opacity: 0.5;
-}
-
-.angular-shape-3 {
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  background: linear-gradient(225deg, #8B5CF6, #A855F7);
-  top: 25%;
-  left: 70%;
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  animation: complex-rotation 20s ease-in-out infinite;
-  opacity: 0.4;
-}
-
-.angular-shape-4 {
-  position: absolute;
-  width: 70px;
-  height: 110px;
-  background: linear-gradient(315deg, #F59E0B, #D97706);
-  top: 75%;
-  right: 70%;
-  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
-  animation: spiral-motion 18s linear infinite;
-  opacity: 0.5;
-}
-
-/* Enhanced sweeping lines */
-.sweep-line-1 {
-  position: absolute;
-  width: 300px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #10B981, #06B6D4, transparent);
-  top: 25%;
-  left: -150px;
-  animation: line-sweep 18s linear infinite;
-}
-
-.sweep-line-2 {
-  position: absolute;
-  width: 250px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #8B5CF6, #A855F7, transparent);
-  top: 75%;
-  left: -125px;
-  animation: line-sweep 20s linear infinite;
-  animation-delay: -10s;
-}
-
-.sweep-line-3 {
-  position: absolute;
-  width: 280px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #EF4444, #F59E0B, transparent);
-  top: 45%;
-  left: -140px;
-  animation: line-sweep 22s linear infinite;
-  animation-delay: -5s;
-}
-
-.sweep-line-4 {
-  position: absolute;
-  width: 200px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #10B981, transparent);
-  top: 85%;
-  left: -100px;
-  animation: line-sweep 15s linear infinite;
-  animation-delay: -12s;
-}
-
-/* Floating particles */
-.particle-1 {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #10B981;
-  border-radius: 50%;
-  top: 20%;
-  left: 30%;
-  animation: float-particles 14s ease-in-out infinite;
-  opacity: 0.7;
-}
-
-.particle-2 {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #06B6D4;
-  border-radius: 50%;
-  top: 60%;
-  left: 80%;
-  animation: float-particles 11s ease-in-out infinite;
-  animation-delay: -3s;
-  opacity: 0.6;
-}
-
-.particle-3 {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #8B5CF6;
-  border-radius: 50%;
-  top: 80%;
-  left: 20%;
-  animation: float-particles 16s ease-in-out infinite;
-  animation-delay: -6s;
-  opacity: 0.8;
-}
-
-.particle-4 {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background: #F59E0B;
-  border-radius: 50%;
-  top: 35%;
-  left: 90%;
-  animation: float-particles 13s ease-in-out infinite;
-  animation-delay: -9s;
-  opacity: 0.5;
-}
-
-.particle-5 {
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  background: #EF4444;
-  border-radius: 50%;
-  top: 90%;
-  left: 60%;
-  animation: zigzag-motion 12s ease-in-out infinite;
-  opacity: 0.6;
-}
-
-/* Complex geometric shapes */
-.complex-shape-1 {
-  position: absolute;
-  width: 120px;
-  height: 60px;
-  background: linear-gradient(45deg, #10B981, #06B6D4, #8B5CF6);
-  top: 5%;
-  right: 20%;
-  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-  animation: complex-rotation 25s ease-in-out infinite;
-  opacity: 0.4;
-}
-
-.complex-shape-2 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, #8B5CF6, #A855F7, transparent);
-  top: 65%;
-  left: 5%;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  animation: spiral-motion 22s linear infinite;
-  opacity: 0.5;
-}
-
 /* Content wrapper */
 .banner-content {
   position: relative;
@@ -539,24 +211,72 @@
   margin-bottom: 1rem;
   font-weight: 900;
   text-shadow: 
-    0 0 20px rgba(255, 255, 255, 0.5),
-    0 0 40px rgba(16, 185, 129, 0.3),
-    0 4px 8px rgba(0,0,0,0.3);
+    0 0 20px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(0, 0, 0, 0.6),
+    0 4px 8px rgba(0, 0, 0, 0.7),
+    0 0 60px rgba(255, 255, 255, 0.2);
   letter-spacing: 0.1em;
-  background: linear-gradient(45deg, #FFFFFF, #10B981, #06B6D4);
-  background-size: 200% 200%;
+  color: #FFFFFF;
+  background: linear-gradient(45deg, #4A90E2, #7BB3F0, #A8D0F0, #FFFFFF, #7BB3F0, #4A90E2);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient-shift 3s ease-in-out infinite;
+  animation: harmonious-flow 8s ease-in-out infinite;
+  position: relative;
+  /* Fallback para navegadores que no soporten background-clip */
+  -webkit-text-stroke: 1px #2E5BBA;
+  transform-origin: center;
 }
 
-@keyframes gradient-shift {
-  0%, 100% {
+@keyframes harmonious-flow {
+  0% {
     background-position: 0% 50%;
+    transform: scale(1);
+    text-shadow: 
+      0 0 20px rgba(0, 0, 0, 0.8),
+      0 0 40px rgba(0, 0, 0, 0.6),
+      0 4px 8px rgba(0, 0, 0, 0.7),
+      0 0 60px rgba(255, 255, 255, 0.2);
+  }
+  25% {
+    background-position: 100% 50%;
+    transform: scale(1.01);
+    text-shadow: 
+      0 0 22px rgba(0, 0, 0, 0.8),
+      0 0 45px rgba(0, 0, 0, 0.6),
+      0 4px 8px rgba(0, 0, 0, 0.7),
+      0 0 70px rgba(255, 255, 255, 0.3),
+      0 0 90px rgba(116, 179, 240, 0.2);
   }
   50% {
+    background-position: 200% 50%;
+    transform: scale(1.005);
+    text-shadow: 
+      0 0 25px rgba(0, 0, 0, 0.8),
+      0 0 50px rgba(0, 0, 0, 0.6),
+      0 4px 8px rgba(0, 0, 0, 0.7),
+      0 0 80px rgba(255, 255, 255, 0.4),
+      0 0 100px rgba(116, 179, 240, 0.3);
+  }
+  75% {
     background-position: 100% 50%;
+    transform: scale(1.01);
+    text-shadow: 
+      0 0 22px rgba(0, 0, 0, 0.8),
+      0 0 45px rgba(0, 0, 0, 0.6),
+      0 4px 8px rgba(0, 0, 0, 0.7),
+      0 0 70px rgba(255, 255, 255, 0.3),
+      0 0 90px rgba(116, 179, 240, 0.2);
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: scale(1);
+    text-shadow: 
+      0 0 20px rgba(0, 0, 0, 0.8),
+      0 0 40px rgba(0, 0, 0, 0.6),
+      0 4px 8px rgba(0, 0, 0, 0.7),
+      0 0 60px rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -768,5 +488,150 @@
   filter: brightness(1.3) contrast(1.2);
   width: 110px;
   height: 110px;
+}
+
+/* Background Banner Image - Full banner size */
+.background-banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+  z-index: 5;
+  object-fit: cover;
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* Navbar Button Hover Effects */
+.navbar-link {
+  color: #374151;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-link:hover {
+  background: linear-gradient(135deg, #EBF8FF, #DBEAFE);
+  color: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.navbar-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.navbar-link:hover::before {
+  left: 100%;
+}
+
+.navbar-primary-btn {
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.navbar-primary-btn:hover {
+  background: linear-gradient(135deg, #1D4ED8, #2563EB);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  color: white;
+}
+
+.navbar-primary-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.navbar-primary-btn:hover::before {
+  left: 100%;
+}
+
+/* ========================================
+   DARK MODE THEME OVERRIDES
+   ======================================== */
+
+/* Dark mode geometric banner */
+.dark-theme .geometric-banner {
+  background: 
+    radial-gradient(circle at 20% 80%, #7C3AED 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, #059669 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, #0891B2 0%, transparent 50%),
+    linear-gradient(135deg, #0F172A 0%, #1E293B 30%, #1E40AF 70%, #4C1D95 100%);
+  color: #F9FAFB;
+}
+
+/* Dark mode banner title adjustments */
+.dark-theme .banner-title {
+  background: linear-gradient(45deg, #60A5FA, #93C5FD, #DBEAFE, #FFFFFF, #93C5FD, #60A5FA);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 1px #3B82F6;
+  text-shadow: 
+    0 0 25px rgba(0, 0, 0, 0.9),
+    0 0 50px rgba(0, 0, 0, 0.7),
+    0 4px 8px rgba(0, 0, 0, 0.8),
+    0 0 80px rgba(255, 255, 255, 0.3);
+}
+
+/* Dark mode banner subtitle */
+.dark-theme .banner-subtitle {
+  color: #D1D5DB;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Dark mode banner buttons */
+.dark-theme .banner-btn-primary {
+  background: linear-gradient(135deg, #1E40AF, #3B82F6);
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.4);
+}
+
+.dark-theme .banner-btn-primary:hover {
+  background: linear-gradient(135deg, #1E3A8A, #2563EB);
+  box-shadow: 0 12px 40px rgba(30, 64, 175, 0.5);
+}
+
+.dark-theme .banner-btn-secondary {
+  background: transparent;
+  border: 2px solid #374151;
+  color: #F9FAFB;
+}
+
+.dark-theme .banner-btn-secondary:hover {
+  background: #374151;
+  border-color: #4B5563;
+  color: #FFFFFF;
+}
+
+/* Dark mode promotional tag */
+.dark-theme .promo-tag {
+  background: linear-gradient(45deg, #DC2626, #EF4444);
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
 }
 

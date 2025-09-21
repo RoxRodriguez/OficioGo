@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/MockAuthContext';
-import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import AuthNavbar from './components/AuthNavbar';
 import LoginPage from './components/LoginPage';
 import ProfessionalsMapPage from './components/ProfessionalsMapPage';
@@ -11,10 +10,9 @@ import CreateRequestPage from './components/CreateRequestPage';
 import OrderHistoryPage from './components/OrderHistoryPage';
 import ReviewSystemPage from './components/ReviewSystemPage';
 import ProfilePage from './components/ProfilePage';
-import PersonalProfileSimple from './components/PersonalProfileSimple';
-import SettingsSimple from './components/SettingsSimple';
+import PersonalProfile from './components/PersonalProfile';
+import Settings from './components/Settings';
 import './geometric-animations.css';
-import './theme-styles.css';
 
 // Importar imagen de background
 import BackgroundBannerImg from './img/BACKGROUND-BANNER.png';
@@ -31,10 +29,7 @@ const ProtectedRoute = ({ children }) => {
 };
 
 // Página de inicio completa
-const HomePage = () => {
-  const { colors, isDark } = useTheme();
-  
-  return (
+const HomePage = () => (
   <div>
     {/* Modern Geometric Hero Banner */}
     <section className="geometric-banner">
@@ -65,9 +60,9 @@ const HomePage = () => {
     </section>
 
     {/* Servicios Section */}
-    <section style={{ padding: '4rem 2rem', background: colors.background }}>
+    <section style={{ padding: '4rem 2rem', background: '#f8fafc' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem', color: colors.textPrimary }}>
+        <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem', color: '#1f2937' }}>
           Servicios Populares
         </h2>
         <div style={{ 
@@ -84,18 +79,17 @@ const HomePage = () => {
             { icon: '🚗', title: 'Mecánica', desc: 'Reparación de vehículos' }
           ].map((service, index) => (
             <div key={index} style={{
-              background: colors.cardBackground,
+              background: 'white',
               padding: '2rem',
               borderRadius: '0.5rem',
-              boxShadow: colors.shadow,
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
               textAlign: 'center',
               cursor: 'pointer',
-              transition: 'transform 0.2s',
-              border: `1px solid ${colors.borderLight}`
+              transition: 'transform 0.2s'
             }}>
               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{service.icon}</div>
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: colors.textPrimary }}>{service.title}</h3>
-              <p style={{ color: colors.textSecondary }}>{service.desc}</p>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#1f2937' }}>{service.title}</h3>
+              <p style={{ color: '#6b7280' }}>{service.desc}</p>
             </div>
           ))}
         </div>
@@ -103,9 +97,9 @@ const HomePage = () => {
     </section>
 
     {/* Como Funciona Section */}
-    <section style={{ padding: '4rem 2rem', background: colors.cardBackground }}>
+    <section style={{ padding: '4rem 2rem', background: 'white' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem', color: colors.textPrimary }}>
+        <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem', color: '#1f2937' }}>
           ¿Cómo funciona?
         </h2>
         <div style={{ 
@@ -135,7 +129,7 @@ const HomePage = () => {
           ].map((step, index) => (
             <div key={index} style={{ textAlign: 'center' }}>
               <div style={{ 
-                background: colors.info, 
+                background: '#2563eb', 
                 color: 'white', 
                 width: '4rem', 
                 height: '4rem', 
@@ -150,8 +144,8 @@ const HomePage = () => {
                 {step.step}
               </div>
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{step.icon}</div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: colors.textPrimary }}>{step.title}</h3>
-              <p style={{ color: colors.textSecondary, lineHeight: 1.6 }}>{step.desc}</p>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#1f2937' }}>{step.title}</h3>
+              <p style={{ color: '#6b7280', lineHeight: 1.6 }}>{step.desc}</p>
             </div>
           ))}
         </div>
@@ -159,7 +153,7 @@ const HomePage = () => {
     </section>
 
     {/* Footer */}
-    <footer style={{ background: isDark ? '#0F172A' : '#1f2937', color: 'white', padding: '2rem', textAlign: 'center' }}>
+    <footer style={{ background: '#1f2937', color: 'white', padding: '2rem', textAlign: 'center' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
           <span style={{ fontSize: '1.5rem' }}>🔧</span>
@@ -167,16 +161,15 @@ const HomePage = () => {
         </div>
         <p style={{ opacity: 0.8 }}>Conectando profesionales con clientes desde 2025</p>
         <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
-          <Link to="/about" style={{ color: colors.textLight, textDecoration: 'none' }}>Acerca de</Link>
-          <Link to="/contact" style={{ color: colors.textLight, textDecoration: 'none' }}>Contacto</Link>
-          <Link to="/terms" style={{ color: colors.textLight, textDecoration: 'none' }}>Términos</Link>
-          <Link to="/privacy" style={{ color: colors.textLight, textDecoration: 'none' }}>Privacidad</Link>
+          <Link to="/about" style={{ color: '#9ca3af', textDecoration: 'none' }}>Acerca de</Link>
+          <Link to="/contact" style={{ color: '#9ca3af', textDecoration: 'none' }}>Contacto</Link>
+          <Link to="/terms" style={{ color: '#9ca3af', textDecoration: 'none' }}>Términos</Link>
+          <Link to="/privacy" style={{ color: '#9ca3af', textDecoration: 'none' }}>Privacidad</Link>
         </div>
       </div>
     </footer>
   </div>
-  );
-};
+);
 
 // Componente simple para otras páginas
 const SimplePage = ({ title, description }) => (
@@ -206,10 +199,9 @@ function App() {
   console.log('🚀 App component rendering...');
   
   return (
-    <ThemeProvider>
-      <div style={{ margin: 0, padding: 0, minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
-        <AuthProvider>
-          <Router>
+    <div style={{ margin: 0, padding: 0, minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
+      <AuthProvider>
+        <Router>
           <Routes>
             <Route path="/" element={
               <div>
@@ -258,12 +250,12 @@ function App() {
             } />
             <Route path="/personal-profile" element={
               <ProtectedRoute>
-                <PersonalProfileSimple />
+                <PersonalProfile />
               </ProtectedRoute>
             } />
             <Route path="/settings" element={
               <ProtectedRoute>
-                <SettingsSimple />
+                <Settings />
               </ProtectedRoute>
             } />
             <Route path="/about" element={
@@ -301,7 +293,6 @@ function App() {
         </Router>
       </AuthProvider>
     </div>
-    </ThemeProvider>
   );
 }
 
