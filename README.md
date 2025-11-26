@@ -1,2 +1,4 @@
 # OficioGo
-Trabajo Integrador Testing de Aplicaciones
+Trabajo Testing de Aplicaciones
+
+Roxana Rodríguez - LU 1164643
